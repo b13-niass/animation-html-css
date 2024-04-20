@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e1e1e;
+}
+
+div {
+  /* border: 1px solid #000; */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tel {
+  width: 250px;
+  height: 250px;
+  /* background-color: white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.tel::before,
+.tel::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 50%;
+  border-radius: 50%;
+  border: 1px solid #00e908;
+  left: -20px;
+  right: -20px;
+  top: -20px;
+  bottom: -20px;
+  animation: changer1 1.5s linear infinite;
+}
+
+.circle1,
+.circle2 {
+  display: block;
+  position: absolute;
+  border: 50%;
+  border-radius: 50%;
+  border: 1px solid #00e908;
+  left: -20px;
+  right: -20px;
+  top: -20px;
+  bottom: -20px;
+  animation: changer2 1.5s linear 1s infinite;
+}
+
+@keyframes changer1 {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes changer2 {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+.tel > i {
+  font-size: 60px;
+  padding: 60px;
+  border-radius: 50%;
+  background-color: #00e908;
+  color: white;
+  rotate: 260deg;
+}
+
+@keyframes tournerX {
+}
+
+/* @keyframes tournerY {
+  90% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: perspective(100px) rotateY(180deg);
+  }
+} */

@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e1e1e;
+}
+
+div {
+  /* border: 1px solid #000; */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* transform-origin: bottom center; */
+  /* transform: rotate(30deg); */
+  /* animation: tourner2 3.3s linear infinite alternate forwards; */
+  /* position: relative; */
+  animation: animer-ligne 5s linear infinite;
+}
+
+.item1 {
+  align-self: self-start;
+  animation: animate 5s linear infinite, deplacer 5s linear infinite;
+  /* animation: deplacer 2s linear infinite alternate; */
+}
+
+.item1 > div {
+  /* position: absolute; */
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  clip-path: polygon(
+    50% 0%,
+    90% 20%,
+    100% 60%,
+    75% 100%,
+    25% 100%,
+    0% 60%,
+    10% 20%
+  );
+  rotate: 40deg;
+  /* transform-origin: left; */
+  /* animation: tourner1 1s linear infinite alternate; */
+}
+
+.item2 {
+  /* position: absolute; */
+  width: 500px;
+  border: 3px solid #fff;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+    left: 0;
+  }
+  
+  50% {
+    transform: rotate(360deg);
+    left: 100%;
+  }
+  100% {
+    transform: rotate(0deg);
+    left: 0;
+  }
+}
+
+@keyframes deplacer {
+  50% {
+    transform: translateX(400px);
+  }
+}
+
+@keyframes animer-ligne {
+  0% {
+    transform: rotate(30deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}

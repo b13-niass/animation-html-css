@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  /* border: 1px solid white; */
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e1e1e;
+}
+
+.container {
+  width: 600px;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.container > div {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container > div:first-child {
+  width: 19%;
+  height: 20%;
+  /* background-image: url("./img/folder.jpeg"); */
+}
+
+.container > div:nth-child(2) {
+  width: 10%;
+  height: 20%;
+  /* background-image: url("./img/file.jpeg"); */
+}
+
+.container > div:last-child {
+  width: 19%;
+  height: 20%;
+  /* background-image: url("./img/folder.jpeg"); */
+}
+
+.folder1,
+.folder2 {
+  color: #fdda30;
+  font-size: 100px;
+}
+
+.file {
+  font-size: 70px;
+  color: white;
+  position: absolute;
+  z-index: -1;
+  margin: 0 0 8% 7%;
+  animation: move 2s linear 0s infinite backwards;
+}
+
+@keyframes move {
+  0% {
+    transform: rotateZ(0deg) translate(0);
+  }
+  10% {
+    transform: translateX(40px) translateY(-10px) rotateY(10deg) rotateZ(30deg);
+  }
+  20% {
+    transform: translateX(100px) translateY(-30px) rotateY(20deg) rotateZ(70deg);
+  }
+  30% {
+    transform: translateX(130px) translateY(-50px) rotateY(30deg)
+      rotateZ(100deg);
+  }
+
+  40% {
+    transform: perspective(1000px) translateX(170px) translateY(-60px)
+      rotateY(50deg) rotateZ(140deg);
+  }
+  50% {
+    transform: perspective(1000px) translateX(200px) translateY(-70px)
+      rotateY(80deg) rotateZ(180deg);
+  }
+  60% {
+    transform: perspective(1000px) translateX(250px) translateY(-60px)
+      rotateY(110deg) rotateZ(-10deg);
+  }
+  70% {
+    transform: translateX(280px) translateY(-50px) rotateY(120deg)
+      rotateZ(-5deg);
+  }
+  80% {
+    transform: translateX(300px) translateY(-50px) rotateY(140deg) rotateZ(0deg);
+  }
+  90% {
+    transform: translateX(350px) translateY(-30px) rotateY(160deg) rotateZ(0deg);
+  }
+  100% {
+    transform: translateX(460px) rotateY(180deg) rotateZ(0deg);
+  }
+}

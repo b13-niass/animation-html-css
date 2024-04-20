@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div {
+  /* border: 1px solid #000; */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  border: 3px solid #053659;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 35px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+.texte1 {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  color: #e12a37;
+  top: 0;
+  z-index: 1;
+  overflow: hidden;
+  transform-origin: 150% 0%;
+  transform: translateX(90%);
+  animation: deplacer1 2s ease-in-out infinite;
+}
+
+.texte1 span {
+  display: block;
+  position: absolute;
+  bottom: -22px;
+}
+
+.texte2 {
+  width: 100%;
+  height: 50%;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  color: #053659;
+  bottom: 0;
+  z-index: 2;
+  overflow: hidden;
+  transform-origin: -150% 0%;
+  transform: translateX(-90%);
+  animation: deplacer2 2s ease-in-out infinite;
+}
+.texte2 span {
+  display: block;
+  position: absolute;
+  top: -22px;
+}
+
+@keyframes deplacer1 {
+  30%,
+  40%,
+  50%,
+  60%,
+  70%,
+  80% {
+    transform-origin: 0% 0%;
+    transform: translateX(0%);
+  }
+  to {
+    transform-origin: -150% 0%;
+    transform: translateX(-90%);
+  }
+}
+
+@keyframes deplacer2 {
+  30%,
+  40%,
+  50%,
+  60%,
+  70%,
+  80% {
+    transform-origin: 0% 0%;
+    transform: translateX(0%);
+  }
+  to {
+    transform-origin: 150% 0%;
+    transform: translateX(90%);
+  }
+}
